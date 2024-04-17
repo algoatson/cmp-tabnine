@@ -101,10 +101,6 @@ local function binary()
     return stralnumcmp(a.version, b.version) < 0
   end)
   local latest = versions[#versions]
-  if not latest then
-    vim.notify(string.format('cmp-tabnine: Cannot find installed TabNine. Please run install.%s', (is_win() and 'ps1' or 'sh')))
-    return
-  end
 
   local platform = nil
 
