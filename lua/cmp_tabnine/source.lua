@@ -59,7 +59,7 @@ local function get_parent_dir(path)
 end
 
 -- do this once on init, otherwise on restart this dows not work
-local binaries_folder = get_parent_dir(get_parent_dir(script_path())) .. 'binaries'
+local binaries_folder = fn.expand('~/.nvim/binaries')
 
 -- this function is taken from https://github.com/yasuoka/stralnumcmp/blob/master/stralnumcmp.lua
 local function stralnumcmp(a, b)
